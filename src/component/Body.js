@@ -23,6 +23,8 @@ function filterdata (searchInput,Book){
   const Body=()=>{
     const [searchInput,setSearchInput]=useState("");
     const [Book,setBook]=useState(BookList.result.data.panMacmillanContributor.primaryEditions)
+    const Bookfilter=(BookList.result.data.panMacmillanContributor.primaryEditions)
+
 
     return (
         <>
@@ -31,7 +33,7 @@ function filterdata (searchInput,Book){
             setSearchInput(e.target.value)
         }}/>
         <button className="search-btn" onClick={()=>{
-            const data=filterdata(searchInput,Book);
+            const data=filterdata(searchInput,Bookfilter);
             setBook(data);
             }}>Search</button>
         <h1>{searchInput}</h1>
