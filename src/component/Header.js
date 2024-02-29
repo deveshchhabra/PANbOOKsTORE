@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Title=()=>
   (
 <a href="/">
@@ -11,9 +13,9 @@ const Header=()=>{
       {<Title/>}
       <div className='nav-item'>
         <ul>
-          <li>Home</li>
-          <li>Cart</li>
-          <li>Sing-up</li>
+         <Link to={"/"}>  <li>Home</li></Link> 
+         <Link to={"/Cart"}><li>Cart</li></Link>
+         <Link to={"/Sing-up"}><li>Sing-up</li></Link>
         </ul>
       </div>
     </div>

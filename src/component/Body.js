@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { BookList } from "../constant"
 import { useState } from "react"
 function filterdata (searchInput,Book){
@@ -35,6 +36,7 @@ function filterdata (searchInput,Book){
         <button className="search-btn" onClick={()=>{
             const data=filterdata(searchInput,Bookfilter);
             setBook(data);
+            console.log(Book)
             }}>Search</button>
         <h1>{searchInput}</h1>
        </div>
@@ -42,7 +44,7 @@ function filterdata (searchInput,Book){
       
         {
             Book.map((res)=>{
-                return <RestaurantCard {...res} />;
+                return (<Link to={'BookMenue/'+res.fields.slug}> <RestaurantCard {...res}  /></Link>);
             })}
       </div>
             </>

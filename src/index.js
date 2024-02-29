@@ -1,13 +1,54 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter,RouterProvider,Outlet } from 'react-router-dom';
+import Title from './component/Title'
+import './App.css';
+import Header from './component/Header';
+import Body from './component/Body';
+import BookMenue from './component/BookMenue';
+import { Provider } from 'react-redux';
+ const App=()=> {
+  return (
+    <>
 
+      <Header />
+      <Outlet />
+      
+    </>
+  );
+}
+
+
+
+const appRouter=createBrowserRouter([
+  {
+    path:"/",
+    element:<App />,
+    children:[
+      {
+        path:"/",
+        element:<Body /> ,
+      },
+      {
+        path:"/Cart",
+        element:<Title />,
+      },
+      {
+        path:"/Sing-up",
+        element:<Title />,
+      },
+      {
+        path:"/BookMenue/:id0/:id1/:id2/:id3",
+        element:<BookMenue />,
+      },
+    ]}])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={appRouter} />
   </React.StrictMode>
 );
 
