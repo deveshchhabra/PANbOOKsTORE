@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import {useSelector} from "react-redux"
 const Title=()=>
   (
 <a href="/">
@@ -8,14 +8,16 @@ const Title=()=>
     )
 
 const Header=()=>{
+  const cartItem=useSelector((store)=>store.app.items);
+  console.log(cartItem);
   return(
     <div className='header'>
       {<Title/>}
       <div className='nav-item'>
         <ul>
-         <Link to={"/"}>  <li>Home</li></Link> 
-         <Link to={"/Cart"}><li>Cart</li></Link>
-         <Link to={"/Sing-up"}><li>Sing-up</li></Link>
+        <Link to={"/"}><li>Home</li></Link>
+         <Link to={"/Cart"}><li>cartItem-{cartItem.length}</li></Link>
+         <Link to={"/"}><li>Sing-up</li></Link> 
         </ul>
       </div>
     </div>

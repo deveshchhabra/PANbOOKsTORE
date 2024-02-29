@@ -4,18 +4,23 @@ import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter,RouterProvider,Outlet } from 'react-router-dom';
+import Cart from './component/Cart'
 import Title from './component/Title'
 import './App.css';
 import Header from './component/Header';
 import Body from './component/Body';
 import BookMenue from './component/BookMenue';
 import { Provider } from 'react-redux';
+import store from './utils/Store';
  const App=()=> {
   return (
     <>
+<Provider store={store}>
 
       <Header />
       <Outlet />
+</Provider>
+
       
     </>
   );
@@ -34,7 +39,7 @@ const appRouter=createBrowserRouter([
       },
       {
         path:"/Cart",
-        element:<Title />,
+        element:<Cart />,
       },
       {
         path:"/Sing-up",

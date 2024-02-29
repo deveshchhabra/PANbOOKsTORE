@@ -1,7 +1,9 @@
 function Home(){
     return(
-        <div>
-            <h2>Home</h2>
+        <div className="comments">
+            <h2>Review the book</h2>
+            <input class="input"  value="Input Button">
+</input><button className="add">add</button>
         </div>
     )
 }
