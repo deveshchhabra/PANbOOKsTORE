@@ -17,7 +17,7 @@ const Header=()=>{
         <ul>
         <Link to={"/"}><li>Home</li></Link>
          <Link to={"/Cart"}><li>cartItem-{cartItem.length}</li></Link>
-         <Link to={"/"}><li>Sing-up</li></Link> 
+         <Link to={"/Sign"}><li>Sing-up</li></Link> 
         </ul>
       </div>
     </div>

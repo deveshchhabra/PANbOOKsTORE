@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom'
 import {useDispatch} from "react-redux"
 import {addItems} from '../utils/1appSlice'
 import Title from './Title'
+import Review from './Review'
 const BookMenue=()=>{
     const {id0,id1,id2,id3}=useParams();
     const[Book,setBook]=useState({});
@@ -28,9 +29,9 @@ const BookMenue=()=>{
 
             
             <span><h2 className='id2'>{Book.titleFull}</h2><img  className='card1' src={Book.sourceImagePath} />
-            <span className='price'>$40</span>
+            <span className='price'>${Book.workId-9999}</span>
             <button className='button' onClick={()=>handleAddItem(Book)}>Buy</button></span>
-            <Title />
+            <Review />
 
         </span>
     )

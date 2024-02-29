@@ -42,7 +42,7 @@ function filterdata (searchInput,Book){
        </div>
       <div className='book-list'>
       
-        {
+      {
             Book.map((res)=>{
                 return (<Link to={'BookMenue/'+res.fields.slug}> <RestaurantCard {...res}  /></Link>);
             })}

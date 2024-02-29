@@ -42,7 +42,7 @@ const appRouter=createBrowserRouter([
         element:<Cart />,
       },
       {
-        path:"/Sing-up",
+        path:"/Sign",
         element:<Title />,
       },
       {
