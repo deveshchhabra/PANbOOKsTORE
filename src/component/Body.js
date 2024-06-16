@@ -12,7 +12,7 @@ function filterdata (searchInput,Book){
     return(
       <div className='card'>
    
-      <img src={'https://dam.bibliolive.com/macmillanuk-dam/getimage.aspx?class=books&assetversionid='+id1+'&cat=default&size=amazon&id='+id2}> 
+      <img src={'https://dam.bibliolive.com/macmillanuk-dam/getimage.aspx?class=books&assetversionid='+id1+'&cat=default&size=amazon&id='+id2} alt="card"> 
       </img>
        
   

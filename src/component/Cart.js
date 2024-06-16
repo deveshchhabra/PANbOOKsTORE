@@ -13,7 +13,7 @@ function Cart () {
   const Cart = ({ sourceImagePath, titleFull,workId,isbn }) => {
     return (
       <div className='cart'>
-        <img src={sourceImagePath}></img>
+        <img src={sourceImagePath} alt="scr"></img>
         <h3 className='pink'>Book-Name-{titleFull}</h3>
         <h3 className='pink'>ISBN-{isbn}</h3>
         <h3 className='pink'>Price-{workId-9999}</h3>
